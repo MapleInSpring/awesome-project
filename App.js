@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View testID={"home-page"} style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
-        <Text>Live reload change?</Text>
+        <Text>Hello world</Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>
     );
