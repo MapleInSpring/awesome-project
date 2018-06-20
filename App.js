@@ -1,13 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import NativeToast from './src/native-functions/android/NativeToast';
 
 export default class App extends React.Component {
   render() {
     return (
       <View testID={"home-page"} style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
         <Text>Hello world</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Button
+          onPress={() => {
+            NativeToast.show('Awesome', NativeToast.LONG);
+          }}
+          title="Press Me"
+        />
       </View>
     );
   }
