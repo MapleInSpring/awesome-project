@@ -10,6 +10,6 @@ describe('App component', () => {
 
   it('should show toast after button tap', async () => {
     await element(by.text('PRESS ME')).tap();
-    // await expect(element(by.text('Awesome'))).toBeVisible();
+    await waitFor(element(by.text('Awesome'))).toBeVisible().withTimeout(2000);
   });
 });
