@@ -3,8 +3,17 @@ describe('book list', () => {
     await device.reloadReactNative();
   });
 
+  it('should see title', async () => {
+    await expect(element(by.text('Welcome to Booklist'))).toBeVisible();
+  });
+
   it('should see a list of books', async () => {
     await expect(element(by.text('Clean Code'))).toBeVisible();
     await expect(element(by.text('The Mikado Method'))).toBeVisible();
+  });
+
+  it('should go to playground', async () => {
+    await element(by.id('go_to_playground_button')).tap();
+    await expect(element(by.text('Welcome to Playground'))).toBeVisible();
   });
 });

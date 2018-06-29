@@ -1,13 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View} from "react-native";
+import {Button, StyleSheet, Text, View} from "react-native";
 import Notification from "../containers/notification/Notification";
 
-const PlaygroundView = () => (
-  <View style={styles.container}>
-    <Text>Hello world</Text>
-    <Notification/>
-  </View>
-);
+export default class PlaygroundView extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Notification/>
+      </View>);
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -15,5 +17,3 @@ const styles = StyleSheet.create({
     paddingTop: 22
   },
 });
-
-export default PlaygroundView;
