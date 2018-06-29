@@ -1,18 +1,14 @@
 import React from "react";
-import {FlatList, Text, View, StyleSheet, Button} from "react-native";
+import {FlatList, StyleSheet, Text, View} from "react-native";
 
 const BookRow = ({item}) => <Text style={styles.item}>{item.name}</Text>;
 
 class BookListView extends React.Component {
   render() {
     const books = [{key: '1', name: 'Clean Code'}, {key: '2', name: 'The Mikado Method'}];
-    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Button
-          testID={'go_to_playground_button'}
-          title="Go to Playground"
-          onPress={() => navigate('Playground')}/>
+        <Text>Welcome to Booklist</Text>
         <FlatList
           data={books}
           renderItem={BookRow}/>

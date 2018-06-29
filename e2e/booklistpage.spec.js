@@ -13,7 +13,7 @@ describe('book list', () => {
   });
 
   it('should go to playground', async () => {
-    await element(by.id('go_to_playground_button')).tap();
+    await element(by.text('Playground')).tap();
     await expect(element(by.text('Welcome to Playground'))).toBeVisible();
   });
 });

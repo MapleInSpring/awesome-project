@@ -1,7 +1,7 @@
 describe('App component', () => {
   beforeEach(async () => {
     await device.reloadReactNative();
-    await element(by.id('go_to_playground_button')).tap();
+    await element(by.text('Playground')).tap();
   });
 
   it('should see playground', async () => {
@@ -9,7 +9,7 @@ describe('App component', () => {
   });
 
   it('should go back to booklist', async () => {
-    await element(by.text('Back')).tap();
+    await element(by.text('Home')).tap();
     await expect(element(by.text('Welcome to BookList')));
   });
 });
